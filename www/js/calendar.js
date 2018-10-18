@@ -15,6 +15,7 @@ $(function() {
       $(this).css('background-color', '#edf7f9');
     },
 
+
     header: false,
     selectable: true,
     select: function () {

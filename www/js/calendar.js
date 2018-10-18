@@ -22,6 +22,7 @@ $(function() {
       console.log('clicked')
     },
     viewRender: function(view) {
+        
       $(".month-name").text(view.title);
     },
     editable: true,
@@ -62,8 +63,3 @@ $(function() {
   });
 
 });
-
-//onderstaande code geeft de titel van de maand terug. 
- /* var view = $('#calendar').fullCalendar('getView');
- alert("The view's title is " + view.title);*/
-

@@ -1,4 +1,4 @@
-  $(document).on('pageshow','#index',function(e,data){    
+$(document).on('pageshow','#index',function(e,data){    
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -36,7 +36,7 @@ $(function() {
       eventLimit: true, // allow "more" link when too many events
       weekends: false,
       events: {
-        googleCalendarId: 'anaif37evp8gquo65lu6hin0lo@group.calendar.google.com'
+        googleCalendarId: 'nnh57krhtb5g4n85jj0addtpe8@group.calendar.google.com'
       },
 
       
@@ -72,4 +72,3 @@ $(function() {
   });
 
 });
-

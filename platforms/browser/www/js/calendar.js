@@ -1,9 +1,15 @@
-
-
+  $(document).on('pageshow','#index',function(e,data){    
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+});
 $(function() {
+  
+  
+
 
   // page is now ready, initialize the calendar...
-
   var $calendar = $('#calendar');
   
   $calendar.fullCalendar({
@@ -15,7 +21,7 @@ $(function() {
       $(this).css('background-color', '#edf7f9');
     },
 
-
+ 
     header: false,
     selectable: true,
     select: function () {
@@ -24,12 +30,16 @@ $(function() {
     viewRender: function(view) {
         
       $(".month-name").text(view.title);
+        
     },
     editable: true,
       eventLimit: true, // allow "more" link when too many events
+      weekends: false,
       events: {
         googleCalendarId: 'anaif37evp8gquo65lu6hin0lo@group.calendar.google.com'
-      }
+      },
+
+      
     });
 
   $("#next").on('click', function() {
@@ -45,15 +55,9 @@ $(function() {
   });
   
   $("#week").on('click', function() {
-    $calendar.fullCalendar('changeView', 'agendaWeek')
+    $calendar.fullCalendar('changeView', 'listWeek')
     $(".dropdown").css('display', 'none')
     $("#dropdown-title").text('Week')
-  });
-  
-  $("#day").on('click', function() {
-    $calendar.fullCalendar('changeView', 'agendaDay')
-    $(".dropdown").css('display', 'none')
-    $("#dropdown-title").text('Day')
   });
   
   $("#month").on('click', function() {
@@ -61,5 +65,11 @@ $(function() {
     $(".dropdown").css('display', 'none')
     $("#dropdown-title").text('Month')
   });
+     $("#listDay").on('click', function() {
+    $calendar.fullCalendar('changeView', 'listDay')
+    $(".dropdown").css('display', 'none')
+    $("#dropdown-title").text('Day')
+  });
 
 });
+

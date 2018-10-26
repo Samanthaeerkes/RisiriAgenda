@@ -14,12 +14,12 @@ $(function() {
   
   $calendar.fullCalendar({
 
-    googleCalendarApiKey: 'AIzaSyBlGth1NnL9T1B6iNQsHBuTsR--k1FYJ3c',
+    googleCalendarApiKey: '',
 
-    dayClick: function(date, jsEvent, view) {   
-
-      $(this).css('background-color', '#edf7f9');
-    },
+ eventSources: [
+   { googleCalendarApiKey: 'AIzaSyBlGth1NnL9T1B6iNQsHBuTsR--k1FYJ3c',
+   googleCalendarId: 'nnh57krhtb5g4n85jj0addtpe8@group.calendar.google.com',
+   className: 'fc-event-email'}],
 
  
     header: false,
@@ -36,7 +36,7 @@ $(function() {
       eventLimit: true, // allow "more" link when too many events
       weekends: false,
       events: {
-        googleCalendarId: 'nnh57krhtb5g4n85jj0addtpe8@group.calendar.google.com'
+        /*googleCalendarId: ''*/
       },
 
       

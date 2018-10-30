@@ -11,7 +11,7 @@ $(function() {
 
   // page is now ready, initialize the calendar...
   var $calendar = $('#calendar');
-  
+  console.log($calendar);
   $calendar.fullCalendar({
 
     googleCalendarApiKey: '',
@@ -21,6 +21,7 @@ $(function() {
    googleCalendarId: 'nnh57krhtb5g4n85jj0addtpe8@group.calendar.google.com',
    className: 'fc-event-email'}],
 
+      
  
     header: false,
     selectable: true,
